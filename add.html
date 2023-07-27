@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/add.css" />
+    <title>Add NOte</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1><strong>Add</strong> Your Notes Here</h1>
+
+      <form id="form">
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Enter your title"
+        />
+
+        <div class="checkbox">
+          <div class="checkbox__item">
+            <label for="tag__all">all</label>
+            <input
+              value="all"
+              type="checkbox"
+              name="tag"
+              class="tag"
+              id="tag__all"
+            />
+          </div>
+
+          <div class="checkbox__item">
+            <label for="tag__maktab">maktab</label>
+            <input
+              value="maktab"
+              type="checkbox"
+              name="tag"
+              class="tag"
+              id="tag__maktab"
+            />
+          </div>
+
+          <div class="checkbox__item">
+            <label for="tag__life">life</label>
+            <input
+              value="life"
+              type="checkbox"
+              name="tag"
+              class="tag"
+              id="tag__life"
+            />
+          </div>
+
+          <div class="checkbox__item">
+            <label for="docs">docs</label>
+            <input
+              value="docs"
+              type="checkbox"
+              name="tag"
+              class="tag"
+              id="tag__docs"
+            />
+          </div>
+        </div>
+
+        <textarea name="text" id="text" placeholder="Create A Note"></textarea>
+
+        <div class="buttons">
+          <button class="btn__cancel"><a href="./notes.html">Cancel</a></button>
+          <button class="btn__add">SaveNote</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

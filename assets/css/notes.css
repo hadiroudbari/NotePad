@@ -1,0 +1,89 @@
+@import "./general.css";
+
+header .container {
+  padding: 2.2rem;
+}
+
+header .container .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
+}
+
+header .container .title h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  flex-basis: 50%;
+  line-height: 1.1;
+}
+
+header .container .title a {
+  width: 70px;
+  height: 70px;
+  background-color: var(--tertiary);
+  color: var(--light);
+  border-radius: 50%;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .container .tags .tag__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+header .container .tags .tag__list .tag__item {
+  border: 2px solid var(--dark);
+  padding: 0.7rem 1.2rem;
+  border-radius: 4rem;
+}
+
+header .container .tags .tag__list .tag__item.active {
+  background-color: var(--tertiary);
+  color: var(--light);
+  border-color: var(--tertiary);
+}
+
+main .container {
+  padding: 2.5rem;
+  padding-top: 1rem;
+}
+
+main .container .cards__box {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+main .container .cards__box .card__item {
+  padding: 2rem 1.5rem;
+  background-color: var(--secondary);
+  border-radius: 2rem;
+}
+
+main .container .cards__box .card__item .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+
+main .container .cards__box .card__item .title h4 {
+  line-height: 1.4;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+main .container .cards__box .card__item .icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+main .container .cards__box .card__item p {
+  line-height: 1.5;
+}
