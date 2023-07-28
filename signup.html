@@ -3,37 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="./assets/css/login.css" />
+    <script defer src="./assets/js/signUp.js"></script>
     <title>Register</title>
   </head>
   <body>
     <div class="container">
       <img id="logo" src="./img/notes-logo.jpg" alt="LOGO" />
       <h1><strong>Sign Up</strong> for your notes</h1>
+      <div id="toast"></div>
       <form id="form">
         <input
           type="text"
           id="username"
           name="username"
           placeholder="Enter Username"
+          required
+          minlength="4"
+          maxlength="20"
         />
         <input
           type="email"
           id="email"
           name="email"
           placeholder="Enter Your Email"
+          required
+          minlength="4"
         />
         <input
           type="password"
           id="password__1"
           name="password__1"
           placeholder="Enter Password"
+          required
+          maxlength="20"
         />
         <input
           type="password"
           id="password__2"
           name="password__2"
           placeholder="Repeat Password"
+          required
+          maxlength="20"
         />
         <input value="SignUp" type="submit" id="submit" name="submit" />
       </form>
