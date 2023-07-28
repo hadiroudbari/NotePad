@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/add.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>Add NOte</title>
   </head>
   <body>
@@ -16,74 +24,126 @@
           id="title"
           name="title"
           placeholder="Enter your title"
+          minlength="4"
+          maxlength="30"
+          required
         />
 
         <div class="checkbox">
-          <div class="checkbox__item">
-            <label for="tag__all" class="tag__label"
-              >all
-              <input
-                value="all"
-                type="checkbox"
-                name="tag"
-                class="tag"
-                id="tag__all"
-              />
-              <span class="checkmark"></span>
-            </label>
+          <div class="checkbox__icons">
+            <ion-icon
+              class="checkbox__icon checkbox__icon--edit"
+              name="create-outline"
+            ></ion-icon>
+            <!-- <ion-icon name="pencil-outline"></ion-icon> -->
+
+            <ion-icon
+              class="checkbox__icon checkbox__icon--checkmark"
+              name="checkmark-outline"
+            ></ion-icon>
+
+            <ion-icon
+              class="checkbox__icon checkbox__icon--cancel"
+              name="close-outline"
+            ></ion-icon>
           </div>
 
-          <div class="checkbox__item">
-            <label for="tag__maktab" class="tag__label"
-              >maktab
-              <input
-                value="maktab"
-                type="checkbox"
-                name="tag"
-                class="tag"
-                id="tag__maktab"
-              />
-              <span class="checkmark"></span>
-            </label>
+          <div class="checkbox__items">
+            <div class="checkbox__item">
+              <label for="tag__all" class="tag__label">
+                all
+                <input
+                  checked="checked"
+                  value="all"
+                  type="checkbox"
+                  name="tag"
+                  class="tag"
+                  id="tag__all"
+                />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <div class="checkbox__item">
+              <label for="tag__maktab" class="tag__label"
+                ><ion-icon
+                  class="icon__delete"
+                  name="close-circle-outline"
+                ></ion-icon>
+                maktab
+                <input
+                  value="maktab"
+                  type="checkbox"
+                  name="tag"
+                  class="tag"
+                  id="tag__maktab"
+                />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <div class="checkbox__item">
+              <label for="tag__life" class="tag__label"
+                ><ion-icon
+                  class="icon__delete"
+                  name="close-circle-outline"
+                ></ion-icon>
+                life
+                <input
+                  value="life"
+                  type="checkbox"
+                  name="tag"
+                  class="tag"
+                  id="tag__life"
+                />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <div class="checkbox__item">
+              <label for="tag__docs" class="tag__label"
+                ><ion-icon
+                  class="icon__delete"
+                  name="close-circle-outline"
+                ></ion-icon>
+                docs
+                <input
+                  value="docs"
+                  type="checkbox"
+                  name="tag"
+                  class="tag"
+                  id="tag__docs"
+                />
+                <span class="checkmark"></span>
+              </label>
+            </div>
           </div>
 
-          <div class="checkbox__item">
-            <label for="tag__life" class="tag__label"
-              >life
-              <input
-                value="life"
-                type="checkbox"
-                name="tag"
-                class="tag"
-                id="tag__life"
-              />
-              <span class="checkmark"></span>
-            </label>
-          </div>
-
-          <div class="checkbox__item">
-            <label for="tag__docs" class="tag__label"
-              >docs
-              <input
-                value="docs"
-                type="checkbox"
-                name="tag"
-                class="tag"
-                id="tag__docs"
-              />
-              <span class="checkmark"></span>
-            </label>
-          </div>
-
-          <div class="checkbox__item">
-            <a href="#" class="add__tag">
+          <div class="checkbox__tags--add">
+            <a href="#" class="add__link">
               Add
               <button>+</button>
             </a>
+            <div class="add__tags--box">
+              <input
+                type="text"
+                name="add__tag"
+                class="add__tag"
+                placeholder="Tag Name"
+                minlength="2"
+                maxlength="15"
+              />
+            </div>
           </div>
         </div>
 
-        <textarea name="text" id="text" placeholder="Create A Note"></textarea>
+        <textarea
+          name="text"
+          id="text"
+          placeholder="Create A Note"
+          minlength="20"
+          required
+        ></textarea>
 
         <div class="buttons">
           <button class="btn__cancel"><a href="./notes.html">Cancel</a></button>

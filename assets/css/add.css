@@ -5,7 +5,7 @@
   flex-direction: column;
   margin: 0 auto;
   width: 75%;
-  padding: 100px 0;
+  padding: 50px 0;
   text-align: center;
   gap: 2rem;
 }
@@ -31,8 +31,58 @@
 }
 
 .container #form .checkbox {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.container #form .checkbox .checkbox__icons {
+  width: 3rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  top: 2.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--tertiary);
+  color: var(--light);
+  border-radius: 4rem;
+  padding: 0.4rem 0.8rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.container #form .checkbox .checkbox__icons .checkbox__icon {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.container #form .checkbox .checkbox__icons:hover {
+  width: 5rem;
+}
+
+.container #form .checkbox .checkbox__icons:hover .checkbox__icon--edit {
+  display: none;
+}
+
+.container #form .checkbox .checkbox__icons:hover .checkbox__icon--checkmark,
+.container #form .checkbox .checkbox__icons:hover .checkbox__icon--cancel {
+  display: block;
+}
+
+.container #form .checkbox .checkbox__icons .checkbox__icon--checkmark,
+.container #form .checkbox .checkbox__icons .checkbox__icon--cancel {
+  display: none;
+}
+
+.container #form .checkbox .checkbox__items {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  padding: 1rem 0;
 }
 
 .container #form .checkbox .checkbox__item {
@@ -52,6 +102,12 @@
   text-transform: capitalize;
   cursor: pointer;
   user-select: none;
+  /* animation: shake 0.75s infinite; */
+}
+
+.container #form .checkbox .checkbox__item label .icon__delete {
+  color: red;
+  /* display: none; */
 }
 
 .container #form .checkbox .checkbox__item label input {
@@ -103,7 +159,29 @@
   transform: rotate(45deg);
 }
 
-.container #form .checkbox .checkbox__item .add__tag {
+.container
+  #form
+  .checkbox
+  .checkbox__item
+  label
+  input#tag__all
+  ~ .checkmark:after {
+  display: block;
+}
+
+.container #form .checkbox .checkbox__item label input#tag__all ~ .checkmark {
+  background-color: var(--tertiary);
+}
+
+.container #form .checkbox .checkbox__tags--add {
+  flex-basis: 50%;
+  text-align: left;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+}
+
+.container #form .checkbox .checkbox__tags--add .add__link {
   font-size: 1.2rem;
   display: flex;
   justify-content: flex-end;
@@ -111,7 +189,7 @@
   gap: 0.5rem;
 }
 
-.container #form .checkbox .checkbox__item .add__tag button {
+.container #form .checkbox .checkbox__tags--add .add__link button {
   width: 1.25rem;
   height: 1.25rem;
   background-color: var(--tertiary);
@@ -122,6 +200,16 @@
   justify-content: center;
   align-items: center;
   border-radius: 2px;
+}
+
+.container #form .checkbox .checkbox__tags--add .add__tag {
+  text-align: left;
+  width: 75%;
+  padding: 0.5rem 1rem;
+  border-radius: 4rem;
+  font-family: inherit;
+  margin-top: 0.75rem;
+  border: 1px solid var(--tertiary);
 }
 
 .container #form input#title,
@@ -158,4 +246,22 @@
 .container #form .buttons button.btn__add:hover {
   background-color: var(--light);
   color: var(--tertiary);
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(-2px) rotate(1deg);
+  }
+  25% {
+    transform: translateY(-2px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-2px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(-2px) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(-2px) rotate(0);
+  }
 }

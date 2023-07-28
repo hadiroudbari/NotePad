@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 0 50px;
+  padding: 50px;
 }
 
 .container .body__bg {
@@ -25,12 +25,12 @@
 }
 
 .container button {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   width: 100%;
   margin-bottom: 20px;
   background-color: var(--tertiary);
   color: var(--light);
-  border: 4px solid var(--tertiary);
+  border: 3px solid var(--tertiary);
   border-radius: 4rem;
   font-weight: 700;
   transition: all 0.4s ease-in-out;
@@ -39,7 +39,7 @@
 .container button a {
   display: inline-block;
   width: 100%;
-  padding: 1.2rem 0;
+  padding: 0.8rem 0;
 }
 
 .container button:hover {
