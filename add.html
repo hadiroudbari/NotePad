@@ -12,12 +12,13 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script defer src="./assets/js/addNote.js"></script>
     <title>Add NOte</title>
   </head>
   <body>
     <div class="container">
       <h1><strong>Add</strong> Your Notes Here</h1>
-
+      <div id="toast"></div>
       <form id="form">
         <input
           type="text"
@@ -35,7 +36,6 @@
               class="checkbox__icon checkbox__icon--edit"
               name="create-outline"
             ></ion-icon>
-            <!-- <ion-icon name="pencil-outline"></ion-icon> -->
 
             <ion-icon
               class="checkbox__icon checkbox__icon--checkmark"
@@ -48,76 +48,7 @@
             ></ion-icon>
           </div>
 
-          <div class="checkbox__items">
-            <div class="checkbox__item">
-              <label for="tag__all" class="tag__label">
-                all
-                <input
-                  checked="checked"
-                  value="all"
-                  type="checkbox"
-                  name="tag"
-                  class="tag"
-                  id="tag__all"
-                />
-                <span class="checkmark"></span>
-              </label>
-            </div>
-
-            <div class="checkbox__item">
-              <label for="tag__maktab" class="tag__label"
-                ><ion-icon
-                  class="icon__delete"
-                  name="close-circle-outline"
-                ></ion-icon>
-                maktab
-                <input
-                  value="maktab"
-                  type="checkbox"
-                  name="tag"
-                  class="tag"
-                  id="tag__maktab"
-                />
-                <span class="checkmark"></span>
-              </label>
-            </div>
-
-            <div class="checkbox__item">
-              <label for="tag__life" class="tag__label"
-                ><ion-icon
-                  class="icon__delete"
-                  name="close-circle-outline"
-                ></ion-icon>
-                life
-                <input
-                  value="life"
-                  type="checkbox"
-                  name="tag"
-                  class="tag"
-                  id="tag__life"
-                />
-                <span class="checkmark"></span>
-              </label>
-            </div>
-
-            <div class="checkbox__item">
-              <label for="tag__docs" class="tag__label"
-                ><ion-icon
-                  class="icon__delete"
-                  name="close-circle-outline"
-                ></ion-icon>
-                docs
-                <input
-                  value="docs"
-                  type="checkbox"
-                  name="tag"
-                  class="tag"
-                  id="tag__docs"
-                />
-                <span class="checkmark"></span>
-              </label>
-            </div>
-          </div>
+          <div class="checkbox__items"></div>
 
           <div class="checkbox__tags--add">
             <a href="#" class="add__link">
@@ -127,7 +58,7 @@
             <div class="add__tags--box">
               <input
                 type="text"
-                name="add__tag"
+                name="tag__0"
                 class="add__tag"
                 placeholder="Tag Name"
                 minlength="2"
