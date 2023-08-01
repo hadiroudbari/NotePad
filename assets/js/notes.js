@@ -3,6 +3,7 @@
 const cardsBox = document.querySelector(".cards__box");
 const tagList = document.querySelector(".tag__list");
 const noNote = document.querySelector(".null__notes");
+const searchInput = document.querySelector(".search");
 
 const getLocalStorage = (keyName) => JSON.parse(localStorage.getItem(keyName));
 
@@ -152,6 +153,19 @@ const selectNote = function (id) {
   setLocalStorage(id, "selectedNote");
   location.assign("add.html");
 };
+
+searchInput.addEventListener("input", function (e) {
+  let notes = getLocalStorage("notes");
+
+  if (notes) {
+    const filterNotes = notes.filter(
+      (item) =>
+        item.title.toLowerCase().includes(e.target.value) ||
+        item.text.toLowerCase().includes(e.target.value)
+    );
+    showNotes(filterNotes);
+  }
+});
 
 const init = function () {
   showNotes();

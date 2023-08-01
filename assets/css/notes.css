@@ -2,13 +2,17 @@
 
 header .container {
   padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 header .container .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1rem;
 }
 
 header .container .title h1 {
@@ -47,6 +51,27 @@ header .container .tags .tag__list .tag__item.active {
   background-color: var(--tertiary);
   color: var(--light);
   border-color: var(--tertiary);
+}
+
+header .container .search {
+  position: relative;
+}
+
+header .container .search .icon {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#search {
+  background-color: var(--tertiary);
+  color: var(--light);
+  font-family: "Rubik";
+  border-radius: 4rem;
+  padding: 1rem 1.5rem;
+  padding-left: 3rem;
 }
 
 main .container {
