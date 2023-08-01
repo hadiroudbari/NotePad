@@ -12,10 +12,10 @@ form.addEventListener("submit", function (e) {
 
 const validateUser = function (data) {
   const getUsers = JSON.parse(localStorage.getItem("users"));
+  const getUsersArr = getUsers ? getUsers : [];
 
-  console.log(data.password);
-  if (getUsers.length > 0) {
-    const user = getUsers.find(
+  if (getUsersArr.length > 0) {
+    const user = getUsersArr.find(
       (item) =>
         item.username === data.username && item.password__1 === data.password
     );
@@ -24,6 +24,8 @@ const validateUser = function (data) {
     } else {
       showToast("Invalid Username or Password", "red");
     }
+  } else {
+    showToast("No User Exist Please Create One", "blue");
   }
 };
 
@@ -35,5 +37,7 @@ const showToast = function (text, color = "green") {
 
   if (color === "green") {
     setTimeout(() => location.assign("notes.html"), 2000);
+  } else if (color === "blue") {
+    setTimeout(() => location.assign("signup.html"), 2000);
   }
 };

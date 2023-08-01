@@ -12,6 +12,8 @@ form.addEventListener("submit", function (e) {
   if (formData.password__1 === formData.password__2) {
     createUser(formData);
     form.reset();
+  } else {
+    showToast("Passwords NOT Match", "red");
   }
 });
 
@@ -24,10 +26,12 @@ const createUser = function (data) {
     (item) => item.username === data.username
   );
 
-  console.log(isUsername);
+  const isEmail = userDataArr.some((item) => item.email === data.email);
+
   if (isUsername) {
     showToast("Username already exist", "red");
-    return;
+  } else if (isEmail) {
+    showToast("Email already exist", "red");
   } else {
     userDataArr.push(data);
     localStorage.setItem("users", JSON.stringify(userDataArr));
