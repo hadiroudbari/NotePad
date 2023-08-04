@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 50px;
+  padding: 0 3rem 3rem;
 }
 
 .container .body__bg {
@@ -18,16 +18,23 @@
 }
 
 .container h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: capitalize;
   line-height: 1.15;
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
+}
+
+.container h1 strong {
+  font-size: 4.5rem;
+  background: -webkit-linear-gradient(#283c86, #45a247);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container button {
   font-size: 1.2rem;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   background-color: var(--tertiary);
   color: var(--light);
   border: 3px solid var(--tertiary);
