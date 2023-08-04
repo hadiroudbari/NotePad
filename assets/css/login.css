@@ -89,3 +89,132 @@
 .forgot__password:hover::after {
   transform: scale(1);
 }
+
+.main__password {
+  width: 100%;
+  position: relative;
+}
+
+.show_password {
+  position: absolute;
+  right: 5%;
+  top: 28%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  display: none;
+}
+
+.show_password.active {
+  display: block;
+}
+
+.warning__register {
+  display: none;
+  position: absolute;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+  font-weight: 700;
+  transition: all 0.5s;
+  text-align: left;
+}
+.warning__register::after {
+  content: "";
+  position: absolute;
+  top: -4%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  border: 6px solid #000;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.warning__register--password {
+  font-size: 0.75rem;
+  display: none;
+  top: 300%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light);
+  color: var(--dark);
+  border: 3px solid var(--dark);
+  z-index: 1000;
+}
+
+#message h3 {
+  margin-left: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+#message .invalid {
+  margin-top: 0.5rem;
+}
+
+#message .invalid::before {
+  position: relative;
+  left: -10px;
+  content: "✖";
+}
+
+#message .valid {
+  color: rgb(27, 161, 0);
+}
+
+#message .valid::before {
+  position: relative;
+  left: -10px;
+  content: "✔";
+}
+
+.Done {
+  border-color: green !important;
+}
+
+.Done::after {
+  border-color: green;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.Wrong {
+  border-color: red !important;
+}
+
+.Wrong::after {
+  border-color: red;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.container.select .btn__select {
+  font-size: 1.2rem;
+  width: 100%;
+  background-color: var(--tertiary);
+  color: var(--light);
+  border: 3px solid var(--tertiary);
+  border-radius: 4rem;
+  font-weight: 700;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.container.select .btn__select img {
+  width: 30px;
+  height: 30px;
+}
+
+.container.select .btn__select:nth-child(4) {
+  margin-top: -1.5rem;
+}
+
+.container.select .btn__select:hover {
+  background-color: transparent;
+  color: var(--tertiary);
+}

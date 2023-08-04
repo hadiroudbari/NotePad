@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="./assets/css/login.css" />
-    <script defer src="./assets/js/signUp.js"></script>
+    <script defer src="./assets/js/general.js" type="module"></script>
+    <script defer src="./assets/js/signUp.js" type="module"></script>
     <title>Register</title>
   </head>
   <body>
@@ -33,15 +34,25 @@
           required
           minlength="4"
         />
-        <input
-          type="password"
-          id="password__1"
-          name="password__1"
-          placeholder="Enter Password"
-          required
-          minlength="4"
-          maxlength="20"
-        />
+        <div class="main__password">
+          <input
+            type="password"
+            id="password__1"
+            name="password__1"
+            placeholder="Enter Password"
+            required
+            minlength="4"
+            maxlength="20"
+          />
+          <span class="warning__register warning__register--password"></span>
+          <span class="show_password pass_ON"
+            ><ion-icon class="icon" name="eye"></ion-icon
+          ></span>
+          <span class="show_password pass_OFF"
+            ><ion-icon class="icon" name="eye-off"></ion-icon
+          ></span>
+        </div>
+
         <input
           type="password"
           id="password__2"
@@ -51,8 +62,18 @@
           minlength="4"
           maxlength="20"
         />
+
         <input value="SignUp" type="submit" id="submit" name="submit" />
       </form>
     </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
