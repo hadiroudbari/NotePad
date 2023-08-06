@@ -95,9 +95,8 @@ const CreateUserFormData = (e) => {
 
   const emailValidation = formData.email.split("@")[1].split(".");
 
-  console.log(emailValidation);
   if (
-    (emailValidation[0] === "gmail" || emailValidation[0] === "email") &&
+    (emailValidation[0] === "gmail" || emailValidation[0] === "yahoo") &&
     emailValidation[1] === "com"
   ) {
     if (!passValidation) {
@@ -117,13 +116,14 @@ const CreateUserFormData = (e) => {
 form.addEventListener("submit", CreateUserFormData);
 
 const createUser = function (data) {
-  data.id = Math.floor(Math.random() * 10000000000);
+  data.id = Math.floor(Math.random() * 10 ** 10);
   data.user_date = Date.now();
   data.user_notes = [];
   data.user_tasks = [];
   data.user_status = true;
+
   const getUsers = JSON.parse(localStorage.getItem("users"));
-  const userDataArr = getUsers ? getUsers : [];
+  const userDataArr = getUsers ?? [];
 
   const isUsername = userDataArr.some(
     (item) => item.username === data.username

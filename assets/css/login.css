@@ -40,6 +40,11 @@
   font-family: "Rubik";
 }
 
+.container #form .name__inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .container #form input#submit {
   display: inline-block;
   background-color: var(--tertiary);

@@ -17,6 +17,26 @@
       <h1><strong>Sign Up</strong> for your Papers</h1>
       <div id="toast"></div>
       <form id="form">
+        <div class="name__inputs">
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            placeholder="Firstname"
+            required
+            minlength="4"
+            maxlength="30"
+          />
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            placeholder="Lastname"
+            required
+            minlength="4"
+            maxlength="30"
+          />
+        </div>
         <input
           type="text"
           id="username"
@@ -24,7 +44,7 @@
           placeholder="Enter Username"
           required
           minlength="4"
-          maxlength="20"
+          maxlength="30"
         />
         <input
           type="email"
@@ -41,7 +61,7 @@
             name="password__1"
             placeholder="Enter Password"
             required
-            minlength="4"
+            minlength="8"
             maxlength="20"
           />
           <span class="warning__register warning__register--password"></span>
@@ -59,7 +79,7 @@
           name="password__2"
           placeholder="Repeat Password"
           required
-          minlength="4"
+          minlength="8"
           maxlength="20"
         />
 
